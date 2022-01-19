@@ -10,20 +10,41 @@
 </head>
 <body>
 
-    <h1>To Do List</h1>
+<h1>To Do List</h1>
+
+<div id="content-outer-container">
     
     <div id="sidebar-outer-container">
-
-        <div class="task-outer-shell">
-            <p>TaskTitle</p>
+        
+            <p>default</p>
             <p>TaskDescription</p>
             <div>DueDate</div>
             <div>priority</div>
-
-
-        </div>
-
+            <button>add project</button>
+        
     </div>
+
+    <div id="task-area-container">
+        <form id="task-form">
+            <input type="text" name="title" id="title" placeholder="Title">
+            <textarea name="description" id="description" placeholder="Description"></textarea>
+            <input type="datetime-local" name="due-date" id="due-date">
+            
+            <div>
+                <p>Priority</p>
+                <input type="radio" name="priority" id="low" value="low">
+                <label for="low">low</label>
+                <input type="radio" name="priority" id="medium" value="medium">
+                <label for="medium">medium</label>
+                <input type="radio" name="priority" id="high" value="high">
+                <label for="high">high</label>
+            </div>    
+            <button id="todo-submit">add</button>
+            
+        </form>
+    </div>
+
+</div>
 
     
 
@@ -42,5 +63,6 @@
     </div>
 
     <script src="./bundle.js"></script>
+    <script src="https://kit.fontawesome.com/17ad717150.js" crossorigin="anonymous"></script>
 </body>
 </html>
