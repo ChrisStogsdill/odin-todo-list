@@ -25,24 +25,27 @@
     </div>
 
     <div id="task-area-container">
-        <form id="task-form">
-            <input type="text" name="title" id="title" placeholder="Title">
-            <textarea name="description" id="description" placeholder="Description"></textarea>
-            <input type="datetime-local" name="due-date" id="due-date">
-            
-            <div>
-                <p>Priority</p>
-                <input type="radio" name="priority" id="low" value="low">
-                <label for="low">low</label>
-                <input type="radio" name="priority" id="medium" value="medium">
-                <label for="medium">medium</label>
-                <input type="radio" name="priority" id="high" value="high">
-                <label for="high">high</label>
-            </div>    
-            <button id="todo-submit">add</button>
-            
-        </form>
+        <div id="task-form-container">
+            <form id="task-form">
+                <input type="text" name="title" id="title" placeholder="Title">
+                <textarea name="description" placeholder="Description"></textarea>
+                <input type="datetime-local" name="due-date" id="due-date">
+                
+                <div>
+                    <p>Priority</p>
+                    <input type="radio" name="priority" id="low" value="low">
+                    <label for="low">low</label>
+                    <input type="radio" name="priority" id="medium" value="medium">
+                    <label for="medium">medium</label>
+                    <input type="radio" name="priority" id="high" value="high">
+                    <label for="high">high</label>
+                </div>    
+                <button id="todo-submit">add</button>
+                
+            </form>
+        </div>
     </div>
+    <div id="created-task-container"></div>
 
 </div>
 
@@ -51,16 +54,6 @@
 
 
 
-
-
-
-    <div id="todo-list-form-outer-container" class="display-none">
-        <form id="todo-form">
-            <label for="testText">testText</label>
-            <input type="text" id="testText" name="testText">
-            <div id="form-button-container"></div>
-        </form>
-    </div>
 
     <script src="./bundle.js"></script>
     <script src="https://kit.fontawesome.com/17ad717150.js" crossorigin="anonymous"></script>
