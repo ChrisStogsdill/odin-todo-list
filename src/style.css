@@ -1,14 +1,9 @@
-* {
-    margin: 0;
-   
-}
+
 
 
 
 body {
     font-family: 'Roboto', serif;
-    background-color: #A8D0DB;
-    
 }
 
 #content-outer-container {
@@ -78,7 +73,7 @@ h1 {
 form {
     gap: 1em;
     box-shadow: 0px 15px 30px rgb(0 0 0 / 15%);
-    background-color: white;
+    background-image: linear-gradient(white, rgb(221, 221, 221));
     padding: 1em;
     display: flex;
     flex-direction: column;
