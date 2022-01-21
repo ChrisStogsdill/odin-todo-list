@@ -1,7 +1,7 @@
 export default function createToDoForm(projectName= 'main') {
     const taskFormContainer = document.getElementById('task-form-container'); 
     const form = taskFormContainer.appendChild(document.createElement('form'));
-    form.id = `${projectName}-form`;
+    form.id = `${projectName}-tasks`;
 
 
     let titleInput = form.appendChild(document.createElement('input'))
