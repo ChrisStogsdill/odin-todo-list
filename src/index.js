@@ -21,10 +21,15 @@ document.getElementById('todo-submit').addEventListener('click', (clickEvent) =>
             targetDueDate, targetPriority);
 
     
-    tasks['main-tasks'].push(tempTask);
+    tasks[taskKey].push(tempTask);
     
-    console.table(tasks['main-tasks'])
+    console.table(tasks[taskKey])
 
     document.forms[0].reset()
 })
 
+const taskTitle = document.getElementById('task-title-area');
+const taskDescription = document.getElementById('task-description-area');
+taskTitle.addEventListener('click', (clickEvent) => {
+    taskDescription.classList.toggle('un-hidden')
+})

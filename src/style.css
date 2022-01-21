@@ -55,18 +55,6 @@ h1 {
 }
 
 
-#todo-list-form-outer-container {
-    
-    background-color: #E49273;
-    max-width: fit-content;
-    padding: 1em;
-    justify-content: center;
-    position: fixed;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
-    border: solid #2B4570;
-}
 
 
 
@@ -84,3 +72,41 @@ form {
     box-shadow: 0px 15px 30px rgb(0 0 0 / 15%);
 
 }
+
+.task-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    background-image: linear-gradient(#E49273, #ce5022);
+}
+
+.task-title-area {
+    display: flex;
+    gap: 1em;
+    transition: all .2s ease-in-out;
+    justify-content: center;
+}
+.task-title-area:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+
+
+.task-description-area {
+    transition: all .2s;
+    
+    
+    max-height: 0;
+    overflow: hidden;
+}
+
+.task-description-area:hover {
+    max-height: 0 ;
+}
+
+.un-hidden {
+    max-height: 200px;
+    overflow: auto;
+}
+
