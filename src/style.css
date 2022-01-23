@@ -101,9 +101,7 @@ form {
     overflow: hidden;
 }
 
-.task-description-area:hover {
-    max-height: 0 ;
-}
+
 
 .un-hidden {
     max-height: 200px;

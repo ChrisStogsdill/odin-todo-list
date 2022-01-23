@@ -1,9 +1,16 @@
+import createTaskAddButtonListener from './createTaskAddButtonListener.js';
+
 export default function createToDoForm(projectName= 'main') {
     const taskFormContainer = document.getElementById('task-form-container'); 
     const form = taskFormContainer.appendChild(document.createElement('form'));
+
+    //remove old form
+    taskFormContainer.removeChild(taskFormContainer.firstChild)
+
+
     form.id = `${projectName}-tasks`;
 
-
+    //fill out form html
     let titleInput = form.appendChild(document.createElement('input'))
     Object.assign(titleInput, {
         type: 'text', 
@@ -71,6 +78,8 @@ export default function createToDoForm(projectName= 'main') {
     let addButton = form.appendChild(document.createElement('button'));
     addButton.innerText = 'add';
     addButton.id = 'todo-submit'
+
+    createTaskAddButtonListener();
 
 
 };
