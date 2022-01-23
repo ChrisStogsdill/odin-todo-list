@@ -3,7 +3,7 @@ import clearTasks from './clearTasks.js';
 
 
 // get tasks from localStorage if it isn't passed into the function
-export default function populateCreatedTasksContainer(taskKey, tasks= JSON.parse(localStorage.getItem('tasks'))){
+export default function populateCreatedTasksContainer(taskKey = 'main-tasks', tasks= JSON.parse(localStorage.getItem('tasks'))){
     //clear current tasks and fill them back in 
     clearTasks();
 

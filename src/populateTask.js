@@ -1,4 +1,5 @@
 import createTaskDropDownEventListener from './createTaskDropDownEventListener.js';
+import createDeleteButtonListener from './createDeleteButtonListener.js';
 
 
 export default function populateTask(title, description, dueDate, priority){
@@ -25,6 +26,9 @@ export default function populateTask(title, description, dueDate, priority){
     deleteButton.href = '#';
     deleteButton.innerHTML = '<i class="far fa-trash-alt"></i>';
     deleteButton.classList.add('delete-button');
+
+    //add delete button listener
+    createDeleteButtonListener(deleteButton);
 
     //create a container for the description. so it can be hidden
     let taskDescriptionContainer = 
