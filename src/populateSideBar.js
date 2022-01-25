@@ -5,9 +5,8 @@ export default function populateSideBar() {
     let tempTasks = JSON.parse(localStorage.getItem('tasks'));
 
     //remove all sidebar items before the newproject button
-    let sideBarChildCount = sidebarOuterContainer.childElementCount;
-    for (let i = 0; i < sideBarChildCount -1; i++){
-        sidebarOuterContainer.removeChild(sidebarOuterContainer.firstChild)
+    while(sidebarOuterContainer.childElementCount>1){
+        sidebarOuterContainer.removeChild(sidebarOuterContainer.firstElementChild)
     }
 
     //loop through all object keys
