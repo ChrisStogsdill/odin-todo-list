@@ -1,10 +1,14 @@
+import createToDoForm from './createToDoForm';
+import clearTasks from './clearTasks';
+import populateCreatedTasksContainer from './populateCreatedTasksContainer';
+
 export default function populateSideBar() {
   const sidebarOuterContainer = document.getElementById(
-    "sidebar-outer-container"
+    'sidebar-outer-container',
   );
-  const addProjectButton = document.getElementById("add-project-button");
+  const addProjectButton = document.getElementById('add-project-button');
 
-  const tempTasks = JSON.parse(localStorage.getItem("tasks"));
+  const tempTasks = JSON.parse(localStorage.getItem('tasks'));
 
   // remove all sidebar items before the newproject button
   while (sidebarOuterContainer.childElementCount > 1) {
@@ -17,14 +21,14 @@ export default function populateSideBar() {
     const tabName = key.slice(0, -6);
 
     // insert project name link before button
-    const newProjectLink = document.createElement("a");
-    newProjectLink.href = "#";
+    const newProjectLink = document.createElement('a');
+    newProjectLink.href = '#';
     newProjectLink.innerText = tabName;
 
     sidebarOuterContainer.insertBefore(newProjectLink, addProjectButton);
 
     // create and add event listener to newly created project
-    newProjectLink.addEventListener("click", () => {
+    newProjectLink.addEventListener('click', () => {
       createToDoForm(tabName);
       clearTasks();
       populateCreatedTasksContainer(key);
