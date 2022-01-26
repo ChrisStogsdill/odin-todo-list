@@ -1,110 +1,91 @@
-
-
-
-
 body {
-    font-family: 'Roboto', serif;
+  font-family: "Roboto", serif;
 }
 
 #content-outer-container {
-    display: flex;
-    
-    
-    
-    
+  display: flex;
 }
 
 h1 {
-    text-align: center;
+  text-align: center;
 }
 
 .display-flex {
-    display: flex;
+  display: flex;
 }
 
 .display-none {
-    display: none;
+  display: none;
 }
 
 .flex-centered {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .flex-column {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .orange-background {
-    background-color: #E49273;
+  background-color: #e49273;
 }
 
 .blue-background {
-    background-color: #A8D0DB;
+  background-color: #a8d0db;
 }
 
 #sidebar-outer-container {
-    background-color: #E49273;
-    display: flex;
-    flex-direction: column;
-    margin-left: 0;
-    gap: 1em;
-    padding: 1em;
+  background-color: #e49273;
+  display: flex;
+  flex-direction: column;
+  margin-left: 0;
+  gap: 1em;
+  padding: 1em;
 }
 
-
-
-
-
 form {
-    gap: 1em;
-    box-shadow: 0px 15px 30px rgb(0 0 0 / 15%);
-    background-image: linear-gradient(white, rgb(221, 221, 221));
-    padding: 1em;
-    display: flex;
-    flex-direction: column;
-    border-radius: 4px;
+  gap: 1em;
+  box-shadow: 0px 15px 30px rgb(0 0 0 / 15%);
+  background-image: linear-gradient(white, rgb(221, 221, 221));
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
 }
 
 .shadow {
-    box-shadow: 0px 15px 30px rgb(0 0 0 / 15%);
-
+  box-shadow: 0px 15px 30px rgb(0 0 0 / 15%);
 }
 
 .task-container {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-    background-image: linear-gradient(#E49273, #ce5022);
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  background-image: linear-gradient(#e49273, #ce5022);
 }
 
 .task-title-area {
-    display: flex;
-    gap: 1em;
-    transition: all .2s ease-in-out;
-    justify-content: center;
+  display: flex;
+  gap: 1em;
+  transition: all 0.2s ease-in-out;
+  justify-content: center;
 }
 .task-title-area:hover {
-    transform: scale(1.1);
-    cursor: pointer;
+  transform: scale(1.1);
+  cursor: pointer;
 }
-
-
 
 .task-description-area {
-    transition: all .2s;
-    
-    
-    max-height: 0;
-    overflow: hidden;
+  transition: all 0.2s;
+
+  max-height: 0;
+  overflow: hidden;
 }
-
-
 
 .un-hidden {
-    max-height: 200px;
-    overflow: auto;
+  max-height: 200px;
+  overflow: auto;
 }
-

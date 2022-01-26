@@ -1,16 +1,15 @@
-import './style.css'
-import createToDoForm from './createToDoForm.js';
-import populateCreatedTasksContainer from './populateCreatedTasksContainer.js';
-import addProjectButtonLogic from './addProjectButtonLogic.js';
-import populateSideBar from './populateSideBar.js';
+import "./style.css";
+import createToDoForm from "./createToDoForm";
+import populateCreatedTasksContainer from "./populateCreatedTasksContainer";
+import addProjectButtonLogic from "./addProjectButtonLogic";
+import populateSideBar from "./populateSideBar";
 
-const mainLink = document.getElementById('main-link');
-const allLink = document.getElementById('all-link');
+const mainLink = document.getElementById("main-link");
 
-//check if localStorage doesn't have tasks yet. Then set it.
-if (!localStorage.getItem('tasks')) {
-    let tasks = {'main-tasks': []};
-    localStorage.setItem('tasks', JSON.stringify(tasks))
+// check if localStorage doesn't have tasks yet. Then set it.
+if (!localStorage.getItem("tasks")) {
+  const tasks = { "main-tasks": [] };
+  localStorage.setItem("tasks", JSON.stringify(tasks));
 }
 
 populateSideBar();
@@ -21,7 +20,7 @@ addProjectButtonLogic();
 
 populateCreatedTasksContainer();
 
-mainLink.addEventListener('click', () => {
-    createToDoForm();
-    populateCreatedTasksContainer();
+mainLink.addEventListener("click", () => {
+  createToDoForm();
+  populateCreatedTasksContainer();
 });
